@@ -39,7 +39,7 @@ void _overlayAnalogClock()
     {
       int pix = analogClock12pixel + roundf((overlaySize / 12.0f) *i);
       if (pix > overlayMax) pix -= overlaySize;
-      strip.setPixelColor(pix, 0x00FFAA);
+      strip.setPixelColor(pix, ((uint32_t)brightness<<8)|((uint32_t)brightness*2/3));
     }
   }
   if (!analogClockSecondsTrail) strip.setPixelColor(secondPixel, (uint32_t)brightness<<16);
