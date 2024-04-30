@@ -11,7 +11,7 @@ void _overlayAnalogClock()
   {
     _overlayAnalogCountdown(); return;
   }
-  uint8_t brightness = 255;
+  uint8_t brightness = strip.getBrightness();
   float hourP = ((float)(hour(localTime)%12))/12.0f;
   float minuteP = ((float)minute(localTime))/60.0f;
   hourP = hourP + minuteP/12.0f;
